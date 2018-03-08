@@ -149,5 +149,7 @@ void caml_main(char **argv)
 
 void caml_startup(char **argv)
 {
+asm("caml_startup__code_begin:");
   caml_main(argv);
+asm("caml_startup__code_end:");
 }
